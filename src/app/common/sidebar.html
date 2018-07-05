@@ -1,0 +1,30 @@
+<aside ng-class="sidebarCollapse === true ? 'sidebar-collapse main-sidebar ':'col-sm-2 main-sidebar' ">
+  <section class="sidebar">
+    <ul class="sidebar-menu" ng-init="activeTab=0">
+  <li ng-class="activeTab===5 ? 'treeview active' : 'treeview'">
+        <a href="javascript:void(0);" ng-click="activeTab=5">
+          <i class="fa fa-user"></i>
+          <span>Registration Form</span>
+          <span class="fa fa-chevron-down"></span>
+        </a>
+        <ul class="treeview-menu" ng-init="subTab5=0">
+          <li ng-class="{active:subTab5===2}">
+            <a href="javascript:void(0);" ng-click="subTab5=2">
+              <i class="fa fa-angle-right"></i> User
+            </a>
+            <ul class="treeview-menu" ng-init="userTab5=0">
+              <li ng-class="{active:userTab5===1}">
+                <a ui-sref="main.adduser" ng-click="userTab5=1;">
+                  <i class="fa fa-angle-right"></i> Create/Edit User</a>
+              </li>
+              <li ng-class="{active:userTab5===2}">
+                <a ui-sref="main.listusers" ng-click="userTab5=2">
+                  <i class="fa fa-angle-right"></i> List Users</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</aside>

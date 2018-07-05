@@ -1,0 +1,71 @@
+.duallistmultiselect{
+
+  label {
+    margin: 10px 45px 10px 45px;
+    text-align: center;
+  }
+  .btn {
+    margin: 10px;
+  }
+  small{
+    color: #888888;
+  }
+  .selectall-link{
+    font-size: 12px;
+    padding:5px;
+  }
+  .link-margin{
+    margin: 5px 0px 0px 0px;
+  }
+  .pool {
+    border: 1px solid #ccc;
+    //border-radius: 4px;
+    padding: 10px;
+    margin: 0px;
+    height: 150px;
+    overflow-y: scroll;
+
+    ul {
+      list-style: none;
+      padding-left: 0px;
+      li {
+        width: 100%;
+        padding: 4px 8px 4px 4px;
+        border-bottom: 1px solid #DCDCDC;
+      }
+      li a:hover {
+        text-decoration: none;
+      }
+      a {
+        color: @cms-orange;
+        font-size: 10px;
+      }
+    }
+  }
+  .disabled{
+    background-color: #eee;
+    opacity: 1;
+    border: 1px solid #ccc;
+  }
+  .linkDisabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: grey;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-button {
+    background: #ccc;
+  }
+  ::-webkit-scrollbar-track-piece {
+    background: #eee;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  .show-error{
+    border-color: @danger-red;
+  }
+}

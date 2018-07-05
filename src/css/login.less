@@ -1,0 +1,91 @@
+.user-image {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: -2px;
+}
+.login-panel {
+  margin-top: 15%;
+  &.panel-primary>.panel-heading {
+    color:black;
+    text-align: center;
+    background-color: white;
+    border-bottom: 2px solid @cms-theme-color;
+    .panel-title {
+      font-size: 28px;
+      padding-bottom: 5px;
+    }
+    .sub-title {
+      color: @font-grey;
+    }
+  }
+  border: 0px;
+  .register-row, .login-row {
+    font-size: 18px;
+    margin: 15px 0px 15px 0px;
+    text-align: center;
+  }
+}
+.login-page{
+  width: 100%;
+  height: 100%;
+}
+.login-container{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+input[type="text"], input[type="password"], input[type="email"] {
+  border-radius: 0px;
+  outline: none;
+  height: 35px;
+}
+.md-button.login-btn{
+  background-color: @cms-orange!important;
+  padding:10px 16px;
+  //margin-left: 0px;
+  text-transform: none;
+  font-size: 16px;
+  width: 230px;
+  text-align: center;
+  margin:auto;
+  display:block;
+}
+.cms-error-row{
+  margin: 0px;
+  border-radius: 0px
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+/** NOT IN USE - REMOVE/CLEAN-UP POST DEVELOPMENT**/
+.form-1 {
+    /* Size & position */
+    width: 300px;
+    margin: 60px auto 40px;
+    padding: 10px;
+    position: relative; /* For the submit button positioning */
+
+    /* Styles */
+    box-shadow:
+        0 0 1px rgba(0, 0, 0, 0.3),
+        0 3px 7px rgba(0, 0, 0, 0.3),
+        inset 0 1px rgba(255,255,255,1),
+        inset 0 -3px 2px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    background: linear-gradient(#eeefef, #ffffff 10%);
+}
+
+.form-1 .field {
+    position: relative; /* For the icon positioning */
+}
+
+.login-background-container {
+  background-size: cover !important;
+  background-position: center;
+  overflow-y: hidden;
+}

@@ -1,0 +1,50 @@
+<div id="list-master-data">
+  <div class="row end page-header header-title">
+    <label class="col-md-2 col-sm-2 col-xs-3 form-label filter-label">Filter By Email: </label>
+    <div class="col-md-3 col-sm-3 col-xs-6">
+      <input class="form-control search-text" id="searchUser" maxlength="30" ng-model="searchUser" placeholder="Email Id" type="text" />
+      <span class="glyphicon glyphicon-search form-control-feedback"></span>
+    </div>
+  </div>
+  <table class="table table-hover table-bordered table-striped">
+    <thead>
+      <tr>
+        <th class="shortcuts"> No. </th>
+        <th class="text-center"> First Name</th>
+        <th class="text-center"> Last Name</th>
+        <th class="text-center"> Email ID </th>
+        <th class="text-center"> Phone Number  </th>
+        <th class="text-center"> Edit</th>
+        <th class="text-center"> Delete </th>
+      </tr>
+    </thead>
+    <div ng-show="vm.users.length > 0">
+    <tbody>
+       <tr ng-repeat="user in vm.users.slice(((vm.currentPage-1)*vm.itemsPerPage), ((vm.currentPage)*vm.itemsPerPage)) | filter:search:vm.filterUser(searchUser)">
+        <td class="text-center"> {{(vm.currentPage-1)*(vm.itemsPerPage)+$index + 1}} </td>
+        <td class="text-left"> {{user.firstName}}  </td>
+        <td class="text-left"> {{user.lastName}}  </td>
+        <td class="text-left"> {{user.email}}</td>
+        <td class="text-left"> {{user.phoneNumber}}</td>
+        <td class="td-actions text-center">
+          <a ui-sef="main.edituser({id: user.id})" ng-click="vm.editValue(user.id)">
+            <i class="fa fa-pencil-square-o"> </i></a>
+        </td>
+        <td class="td-actions text-center">
+          <a href="javascript:;" ng-click="openDeleteConfirmation(user)">
+            <i class="fa fa-remove"> </i></a>
+        </td>
+      </tr>
+    </tbody>
+    </div>
+  </table>
+  <div ng-show="vm.users.length > 0">
+    <center>
+      <ul uib-pagination total-items="vm.userTotelItems" ng-model="vm.currentPage"
+        class="pagination-sm" items-per-page="vm.itemsPerPage" boundary-links="true" force-ellipses="true"></ul>
+    </center>
+  </div>
+  <div ng-show="vm.users.length == 0">
+    <text><center>No Users to list</center> </text>
+  </div>
+</div>

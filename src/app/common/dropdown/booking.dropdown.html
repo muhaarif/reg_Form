@@ -1,0 +1,9 @@
+<a><div id="custom-dropdown">
+    <span class="dropdown-title-text" ng-bind-html="match.model.generalInfo.tkbookingId | uibTypeaheadHighlight:query"></span>
+    <span class="dropdown-sub-title">Status:</span>
+    <span class="dropdown-text-small"  ng-bind-html="match.model.generalInfo.bookingStatus | uibTypeaheadHighlight:query"></span> |
+    <span class="dropdown-sub-title">Amount:</span>
+    <span class="dropdown-text-small"  ng-bind-html="match.model.generalInfo.amount | uibTypeaheadHighlight:query"></span> |
+    <span class="dropdown-sub-title">Booking Date:</span>
+    <span class="dropdown-text-small"  ng-bind-html="match.model.generalInfo.bookingDate | date:'dd-MMM-yyyy'| uibTypeaheadHighlight:query"></span>
+</div></a>

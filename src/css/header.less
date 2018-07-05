@@ -1,0 +1,83 @@
+/**Header**/
+
+.navbar{
+  background-color: #ffffff; //@header-nav-bg;
+  border:0px;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.1);
+  -webkit-box-shadow: 0 0 5px rgba(57, 63, 72, 0.3);
+  -moz-box-shadow: 0 0 5px rgba(57, 63, 72, 0.3);
+  box-shadow: 0 0 5px rgba(57, 63, 72, 0.3);
+  min-height: 66px;
+}
+.navbar-brand{
+  height: 50px;
+  margin-top:0px;
+  padding: 0px 15px;
+  color: #000000;
+}
+.cms-header{
+  .logo{
+    width:230px;
+    background: #ffffff; //@header-logo-bg;
+    a{
+      width: 100%;
+      text-align: center;
+      padding-top: 10px;
+      h3{
+        font-weight: 600;
+        color:@header-font-color!important;
+      }
+    }
+    .img-logo{
+      width: 90px;
+      height: 35px;
+      margin: 15px 0px 0px 0px;
+    }
+
+  }
+  .header-text  {
+    margin: 10px 0px 0px 0px;
+    color:@header-txt-color;
+    a{
+      text-decoration: none;
+      color:;
+    }
+  }
+
+}
+
+.signedin-user-image {
+    height: 40px;
+    border-radius: 50px;
+}
+
+.google-sigin-button {
+        padding: 6em 0em 1.5em 0em;
+    margin-left: 10%;
+}
+
+.user-info {
+    width: 22.5%;
+    margin:5px 15px 0px 0px;
+    text-align: right;
+    span.user-txt{
+      margin-top: 5px;
+      font-weight: 500;
+    }
+    img{
+      margin-left: 5px;
+    }
+    .user-menu{
+      width: 200px;
+      background: #fff;
+      margin-top:5px;
+      border: 1px solid @cms-light-grey;
+      border-radius: 0px;
+      .md-button.btn-signout{
+        margin-top: 20px;
+        width:80%;
+        background-color: @cms-nav-color!important;
+        color: @header-txt-color!important;
+      }
+    }
+}

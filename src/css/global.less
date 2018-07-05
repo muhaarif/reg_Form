@@ -1,0 +1,229 @@
+/** Less Variables **/
+@green-active:#1ABB9C;
+@header-font-color: #000; //#ECF0F1;
+@sidebar-font-color: #000; //#E7E7E7;
+@sidebar-hover-color: rgba(33, 33, 33, 0.05); //rgba(255,255,255,0.05);
+@cms-blue: #3c8dbc;
+@cms-green: #1ABB9C;
+@cms-orange: #F15D24;
+@cms-nav-color: #EDEDED;
+@cms-theme-color: @cms-orange;
+@cms-logo-blue: #367fa9;
+@body-color: #f0f4f5; //or #F7F7F7
+@form-bg-color: #F7F7F7;
+@logo-bg: #367fa9;
+@sidebar-color: #243749;
+@side-menu-header-color:#4b646f;
+@side-menu-header-background:#1a2226;
+@danger-red: #dd4b39;
+@section-border-color: #3c8dbc; //grey - #d2d6de
+@header-txt-color: @font-body-color;// #515356;
+@header-logo-bg: @sidebar-color;
+@header-nav-bg: @cms-nav-color;
+@error-red:#a94442;
+@hover-yellow:#fec524;
+@hover-blue: #337BBE;
+@font-body-color: #000;//#73879C;
+@cms-light-grey:#E6E9ED;
+@cms-dark-grey:#C5C7CB;
+@default-font-size: 14px;
+@border-grey: #cccccc;
+@font-grey: #888888;
+/** Imports **/
+@import "./imports.less";
+
+body, html { height: 100%; }
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  .regular-font(@default-font-size, @font-body-color);
+  font-weight: 400;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+body{
+  background-color: @body-color;
+}
+
+.text-success {
+  color: @cms-green;
+}
+
+.text-error {
+  color: @error-red;
+}
+.wrapper {
+  min-height: 100%;
+  position: static;
+  overflow: hidden;
+}
+.wrapper:before,
+.wrapper:after {
+  content: " ";
+  display: table;
+}
+.wrapper:after {
+  clear: both;
+}
+/** Font **/
+/* H1 - H6 font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  .default-font();
+}
+
+/** Common Css classes **/
+.side-bar {
+   background-color: #ffffff;
+}
+.main-container{
+  background-color: @body-color;
+}
+
+.side-bar, .main-container{
+  min-height: 650px;
+  padding: 0px;
+  margin:5px 10px 5px 10px;
+}
+.main-container{
+  min-height: 1px;
+}
+
+.main-container{
+  width: 100%;
+  min-height: 100%;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+  -moz-transition: -moz-transform 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+  -o-transition: -o-transform 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+  transition: transform 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+  -webkit-transition: margin-left 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+  -o-transition: margin-left 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+  transition: margin-left 0.3s cubic-bezier(0.32, 1.25, 0.375, 1.15);
+  margin-left: 230px;
+  //margin-right:25px;
+  z-index: 820;
+}
+.main-container sidebar-collapse{
+  margin-left: 0px;
+}
+.page-header{
+    margin: 0px;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight:600;
+    color:888888;
+    box-sizing: border-box;
+}
+
+.form-label{
+  font-weight: 400;
+  color:#000000;
+  font-size: 14px;
+  text-align: left!important;
+}
+
+
+.no-padding{padding: 0px;}
+.no-margin{margin: 0px;}
+.no-border{border:0px!important;}
+.no-left-padding{padding-left: 0px;}
+/** Responsive designs **/
+@media (max-width: 767px) {
+  .content-wrapper,
+  .main-footer {
+    margin-left: 0;
+  }
+}
+@media (min-width: 768px) {
+  footer{
+    margin-left: 230px;
+  }
+}
+footer{
+    background: #fff;
+    padding: 15px 20px;
+    display: block;
+}
+.bg-red {background-color: @danger-red !important;}
+.bg-yellow {background-color: @hover-yellow !important;}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-button {
+    background: #ccc;
+}
+::-webkit-scrollbar-track-piece {
+    background: #eee;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+.help-block{
+  color:@danger-red;
+  font-size: 12px;
+  font-weight: 600;
+  padding-top: 4px;
+  margin-bottom: 0px;
+  p{
+    margin-bottom: 0px;
+  }
+
+}
+.help-block.multiselect-error{
+  margin-top: 100px;
+}
+.disable-link{
+  cursor: not-allowed;
+  pointer-events: none;
+  color: grey;
+}
+.collapseSection{
+  display:none;
+}
+.capitalize{
+  text-transform: capitalize;
+}
+.text-middle{
+  vertical-align: middle;
+}
+.right-padding-form {
+  padding: 1em;
+  margin: 0 auto;
+}
+
+.small-input-text-box{
+  width: 25%;
+  display: inline;
+}
+.medium-input-text-box{
+  width: 50%;
+  display: inline;
+}
+
+.enable-link{
+  text-decoration: underline;
+  color: @cms-orange;
+  margin: 5px;
+}
+
+.dropdown-title-text{
+  font-size: 14px;
+  font-weight: normal;
+  display: block;
+  color: black;
+}
+[uib-typeahead-popup].dropdown-menu {
+  overflow-y: auto;
+  max-height: 250px;
+}
+
+input[type="text"], input[type="password"], input[type="email"], select.form-control {
+  border-radius: 0px;
+  outline: none;
+  height: 50px;
+}

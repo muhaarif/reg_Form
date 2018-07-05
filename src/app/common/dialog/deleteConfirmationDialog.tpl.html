@@ -1,0 +1,21 @@
+<div id="dialog">
+  <div class="modal-header">
+      <h3 class="modal-title">Information</h3>
+  </div>
+  <div class="modal-body">
+     Are you sure to delete the {{moduleName}} ?
+  </div>
+  <div class="modal-footer">
+      <div class="col-sm-6">
+        <md-button type="submit" class="md-primary md-raised btn-block dialog-btn cancel" ng-click="$dismiss()">
+          Cancel
+        </md-button>
+      </div>
+      <div class="col-sm-6">
+        <md-button type="submit" class="md-primary md-raised btn-block dialog-btn" ng-click="deleteOk()">
+          Ok
+        </md-button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+{
+  "name": "reg-form",
+  "version": "1.0.0",
+  "description": "This is a registration form",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "postinstall": "bower install --no-interactive",
+    "build": "",
+    "clean": "rimraf \"node_modules/!(rimraf|.bin)\" && rimraf src/vendor/*",
+    "clean-install": "npm run clean && npm cache clean && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhaarif/reg_Form.git"
+  },
+  "keywords": [
+    "angularjs",
+    "webpack",
+    "es6",
+    "babel"
+  ],
+  "author": "Arif",
+  "license": "MIT",
+  "homepage": "https://github.com/muhaarif/reg_Form.git#readme",
+  "dependencies": {
+    "axios": "^0.16.1",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "body-parser": "~1.13.2",
+    "bower": "^1.7.7",
+    "cookie-parser": "~1.3.5",
+    "cors": "^2.8.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "forever": "^0.15.3",
+    "fs": "0.0.1-security",
+    "i": "^0.3.5",
+    "jade": "~1.11.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "morgan": "~1.6.1",
+    "rimraf": "^2.6.1",
+    "serve-favicon": "~2.3.0",
+    "webpack": "^2.5.1"
+  },
+  "engines": {
+    "node": ">=6.0.0 <7.0.0",
+    "npm": ">=3.0.0 <4.0"
+  },
+  "devDependencies": {}
+}

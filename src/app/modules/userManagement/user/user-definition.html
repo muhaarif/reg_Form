@@ -1,0 +1,104 @@
+<div class="form_content" ng-class="collapseForm ? 'collapseSection' : '' ">
+  <div id="error">
+    <uib-alert type="danger" ng-show="vm.submitted" close="vm.submitted==false">{{vm.defaultAlert}}</uib-alert>
+  </div>
+  <input ng-model="vm.user._id" type="hidden" name="_id" />
+  <div class="form-group required">
+    <label class="col-md-3 col-sm-3 col-xs-6 form-label control-label left-label">First Name</label>
+    <div class="col-md-4 col-sm-4 col-xs-6" ng-class="{ 'has-error' : vm.submitted && vm.userForm.firstName.$invalid  }">
+      <input  class="form-control"
+              id="firstName"
+              name="firstName"
+              ng-minlength="1"
+              ng-maxlength="30"
+              ng-model="vm.user.firstName"
+              required
+              ng-pattern="/^[a-zA-Z ]*$/"
+              placeholder="First Name"
+              type="text" />
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-6 help-block has-error" ng-messages="vm.formName.firstName.$error" ng-show="vm.submitted && vm.formName.firstName.$invalid">
+      <p ng-message="maxlength">First Name exceed the character length.</p>
+      <p ng-message="required">First Name is Required</p>
+      <p ng-message="pattern">No special characters allowed.</p>
+    </div>
+  </div>
+  <div class="form-group required">
+    <label class="col-md-3 col-sm-3 col-xs-6 form-label control-label left-label">Last Name</label>
+    <div class="col-md-4 col-sm-4 col-xs-6" ng-class="{ 'has-error' : vm.submitted && vm.userForm.lastName.$invalid  }">
+      <input  class="form-control"
+              id="lastName"
+              name="lastName"
+              ng-minlength="1"
+              ng-maxlength="30"
+              ng-model="vm.user.lastName"
+              required
+              ng-pattern="/^[a-zA-Z ]*$/"
+              placeholder="Last Name"
+              type="text" />
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-6 help-block has-error" ng-messages="vm.formName.lastName.$error" ng-show="vm.submitted && vm.formName.lastName.$invalid">
+      <p ng-message="maxlength">Last Name  exceed the character length.</p>
+      <p ng-message="required">Last Name is Required</p>
+        <p ng-message="pattern">No special characters allowed.</p>
+    </div>
+  </div>
+  <div class="form-group required">
+    <label class="col-md-3 col-sm-3 col-xs-6 form-label control-label left-label">Email ID</label>
+    <div class="col-md-4 col-sm-4 col-xs-6" ng-class="{ 'has-error' : vm.submitted && vm.userForm.email.$invalid  }">
+      <input  class="form-control"
+              id="email"
+              name="email"
+              ng-minlength="1"
+              ng-maxlength="40"
+              ng-model="vm.user.email"
+              required
+              placeholder="test@gmail.com"
+              type="text" />
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-6 help-block has-error" ng-messages="vm.formName.email.$error" ng-if ="vm.submitted && vm.formName.email.$invalid">
+         <p ng-message="maxlength">Email id  exceed the character length.</p>
+         <p ng-message="required">Email id is Required</p>
+         <p ng-message="pattern">Please enter correct email address</p>
+    </div>
+  </div>
+  <div class="form-group required">
+    <label class="col-md-3 col-sm-3 col-xs-6 form-label control-label left-label">Phone Number</label>
+    <div class="col-md-4 col-sm-4 col-xs-6" ng-class="{ 'has-error' : vm.submitted && vm.userForm.phoneNumber.$invalid  }">
+      <input  class="form-control"
+              id="phoneNumber"
+              name="phoneNumber"
+              ng-maxlength="25"
+              ng-model="vm.user.phoneNumber"
+              ng-pattern="/^[0-9]{1,10}$/"
+              placeholder="98365456776"
+              required
+              type="text" />
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-6 help-block has-error" ng-messages="vm.formName.phoneNumber.$error" ng-show="vm.submitted && vm.formName.phoneNumber.$invalid">
+      <p ng-message="maxlength">Phone number is exceeds limit. </p>
+      <p ng-message="required">Phone number is Required</p>
+      <p ng-message="pattern">Please enter correct PhoneNumber</p>
+    </div>
+  </div>
+  <div class="form-group required">
+      <label class="col-md-3 col-sm-3 col-xs-6 form-label control-label left-label">Date Of Birth</label>
+      <div class="col-md-3 col-sm-3 col-xs-3" >
+          <p class="input-group">
+              <input class="form-control inputCalendar" id="dob" name="dob" uib-datepicker-popup="{{dateFormat}}" is-open="dobPopUp"
+                  datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats"
+                  ng-model="vm.user.dob" required="required" placeholder="DD/MM/YYYY" ng-pattern="/^(\d{1,2})-(\d{1,2})-(\d{4})$/"
+                  ng-maxlength="10" type="text" />
+              <span class="input-group-btn">
+            <button type="button" class="btn btn-default datepicker" ng-click="dobPopUp=true"><i class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+          </p>
+      </div>
+    </div>
+  <div class="form-group text-center button-row">
+      <md-button ng-if="!vm.updateView" class="md-warn md-raised btn-cncel-submit" ng-click="vm.clear()"> Cancel </md-button>
+      <md-button ng-if="!vm.updateView" class="md-primary md-raised btn-form-submit" type="submit"> Add User </md-button>
+      <md-button ng-if="vm.updateView" class="md-warn md-raised btn-cncel-submit" ng-click="$state.go('main.listusers')"> Cancel </md-button>
+      <md-button ng-if="vm.updateView" class="md-primary md-raised btn-form-submit" type="submit"> Update User </md-button>
+  </div>
+</div>

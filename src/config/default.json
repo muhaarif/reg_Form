@@ -1,0 +1,11 @@
+{
+  "version":"1.0",
+  "project":"rf-web",
+  "environment":"dev",
+  "self_host":"localhost",
+  "self_port":"8000",
+  "services": {
+    "MASTER_DATA_SVCS_URL":"http://localhost:9000",
+    "NOTIFICATION_SVCS_URL":"http://localhost:9001"
+  }
+}

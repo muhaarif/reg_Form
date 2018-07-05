@@ -1,0 +1,20 @@
+<div id="master-form" >
+  <div class="col-md-10 col-sm-10 col-xs-15">
+    <div class="form_panel" ng-init="collapseForm=false">
+      <div class="form_title">
+        <h3>List Users</h3>
+        <ul class="nav navbar-right panel_toolbox">
+          <li>
+            <a ng-click="collapseForm=!collapseForm">
+              <i ng-class="collapseForm ? 'fa fa-chevron-down' : 'fa fa-chevron-up' "></i>
+            </a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="form_content" ng-class="collapseForm ? 'collapseSection' : '' ">
+        <ng-include src="'app/modules/user/user-list.html'"></ng-include>
+      </div>
+    </div>
+  </div>
+</div>
